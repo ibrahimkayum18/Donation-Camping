@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import swal from "sweetalert";
 
 const Details = () => {
   //   const [eachPhone, setEachPhone] = useState([])
@@ -19,16 +20,23 @@ const Details = () => {
 
   const handleAddToDonations = () => {
 
-    console.log('clicked');
     const localData = [];
 
     const detailsData = JSON.parse(localStorage.getItem('donation'))
-    console.log(detailsData);
-    if (!detailsData == []) {
-        const setData = localStorage.setItem('donation', JSON.stringify(eachPhone))
-        localData.push(setData)
-        console.log(localData);
+    if (!detailsData) {
+        localData.push(eachPhone)
+        localStorage.setItem('donation', JSON.stringify(localData))
+        swal("Good job!", `You have donated $${price} for ${title}`, "success");
         
+    }else{
+        const isExist = detailsData.find(data => data.id === id);
+        if(isExist){
+            swal("So kind of you!", `You have already donated for ${title}`, "error");
+        }else{
+            localData.push(...detailsData,eachPhone);
+            localStorage.setItem('donation', JSON.stringify(localData));
+            swal("Good job!", `You have donated $${price} for ${title}`, "success");
+        }
     }
 
     
