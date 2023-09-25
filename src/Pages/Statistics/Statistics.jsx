@@ -1,6 +1,8 @@
 
 
+
 const Statistics = () => {
+    
     return (
         <div>
             <h2>Statistics page</h2>

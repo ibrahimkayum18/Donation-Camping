@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 const MainCard = ({ donation }) => {
-  console.log(donation);
-  const { image, category, title, color, category_color, bg_color } =
+//   console.log(donation);
+  const {id, image, category, title, color, category_color, bg_color } =
     donation || {};
   return (
-    <Link>
+    <Link to={`/details/${id}`}>
       <div style={{background: bg_color}} className="card bg-base-100 shadow-xl">
         <figure>
           <img src={image} alt="Shoes" />

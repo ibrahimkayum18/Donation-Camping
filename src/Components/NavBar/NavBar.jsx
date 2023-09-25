@@ -2,12 +2,12 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center mt-12 lg:mt-5">
       <div>
-        <img src="https://i.ibb.co/rZP28jy/Logo.png" alt="" />
+        <img className="w-[70%] md:w-[75%] lg:w-[100%] " src="https://i.ibb.co/rZP28jy/Logo.png" alt="" />
       </div>
       <div className="flex-none">
-        <ul className="menu menu-horizontal px-1 space-x-12">
+        <ul className="menu menu-horizontal px-1 space-x-5 lg:space-x-12">
           <NavLink
             to="/"
             className={({ isActive, isPending }) =>
