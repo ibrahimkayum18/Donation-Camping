@@ -8,7 +8,7 @@ const MainCard = ({ donation }) => {
     <Link to={`/details/${id}`}>
       <div style={{background: bg_color}} className="card bg-base-100 shadow-xl">
         <figure>
-          <img src={image} alt="Shoes" />
+          <img className="w-full" src={image} alt="Shoes" />
         </figure>
 
         <div  className="p-5">
