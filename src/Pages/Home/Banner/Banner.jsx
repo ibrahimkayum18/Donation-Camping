@@ -1,4 +1,6 @@
 const Banner = () => {
+
+  
   return (
     <div className="py-5 lg:h-[600px] ">
       <div
