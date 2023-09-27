@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import StatisticsCart from "./StatisticsCharts";
 
 
 
@@ -21,14 +22,14 @@ const Statistics = () => {
       setRemaining(remainingDonation)
     }
   }, [allDonationLength,donation, allSelectedDonation]);
+  console.log(remaining, donation);
 
 
 
 
   return (
-    <div>
-      <h2>All donation list: {donation} </h2>
-      <h2>Selected donation: {remaining} </h2>
+    <div className="w-[50%] mx-auto">
+      <StatisticsCart donation={donation} remaining={remaining}></StatisticsCart>
     </div>
   );
 };
