@@ -7,7 +7,8 @@
 - You can select only one Donation at a time
 - You can select multiple different donations 
 - You can see the total donation in donation page
-- There is a pie chart in statistics page where it indicates how much you have donated and how much remains to donate 
+- There is a pie chart in statistics page where it indicates how much you have donated and how much remains to donate
+- Live link: https://lamentable-voyage.surge.sh/
 
 
 
